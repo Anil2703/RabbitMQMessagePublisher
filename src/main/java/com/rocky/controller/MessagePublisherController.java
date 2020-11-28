@@ -4,6 +4,7 @@ package com.rocky.controller;
 import com.rocky.model.RabbitMQMessage;
 import com.rocky.service.MessagePublishService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ public class MessagePublisherController {
     @Autowired
     private MessagePublishService messagePublishService;
 
+    @PostMapping("/publishMessage")
     public String publishMessageController(@RequestBody RabbitMQMessage rabbitMQMessage) {
 
         try {

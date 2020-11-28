@@ -52,6 +52,8 @@ public class MessageSenderServiceImpl implements MessageSenderService{
                         }
                     });
 
+            System.out.println("Message sent to RabbitMQ Successfully!!");
+
         }catch (Exception e){
 
         }
